@@ -113,7 +113,8 @@ body {
 }
 .skill h4 {
   color: #af5fff;
-  width: auto;
+  
+ 
   font-weight: bold;
 }
 
@@ -123,6 +124,6 @@ body {
   background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
   border-radius: 20px;
   padding: 5px;
-  width: auto;
+ 
 
 }
