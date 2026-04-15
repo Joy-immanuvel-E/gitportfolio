@@ -7,8 +7,8 @@
 :root {
   --dark-bg: #0a0a0a;
   --darker-bg: rgba(10, 10, 10, 0.95);
-  --accent: #2ecc72;
-  --accent-glow: rgba(46, 204, 113, 0.4);
+  --accent: #67e8f9;
+  --accent-glow: rgba(103, 232, 249, 0.5);
   --text: #ffffff;
 }
 html {
@@ -20,7 +20,7 @@ body {
   background-color: #0a0a0a;
   color: var(--text);
 }
-
+/* header section */
 .header {
   display: flex;
   justify-content: space-between;
@@ -33,10 +33,7 @@ body {
 
 .header h3 {
   color: var(--accent);
-  background: linear-gradient(90deg, #2ecc71, #fff);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+  
   font-size: larger;
 }
 
@@ -61,7 +58,7 @@ body {
 }
 
 .header .button-linkedin {
-  background: white;
+  background: var(--text);
   border: none;
   padding: 10px;
   border-radius: 20px;
@@ -81,6 +78,7 @@ body {
   border-bottom: 1px solid var(--accent);
 }
 
+/* home section */
 .home-profile {
   display: flex;
   justify-content: space-between;
@@ -97,7 +95,7 @@ body {
   width: 50%;
 }
 .home-profile .intro h1 span {
-  background: linear-gradient(90deg, #2ecc71, #fff);
+  background: linear-gradient(45deg, var(--accent), #fff);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -116,13 +114,12 @@ body {
   position: relative;
 }
 .home-profile .my-image img {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 
   border-radius: 50%;
   border: 3px solid var(--accent);
 
-  
   box-shadow: 0 0 50px var(--accent-glow);
   transition: all 0.5s ease;
   animation: floating 3s ease-in-out infinite;
@@ -130,8 +127,7 @@ body {
 }
 .home-profile .my-image img:hover {
   border-color: var(--accent);
-  animation:
-    floating 3s ease-in-out infinite;
+  animation: floating 3s ease-in-out infinite;
 }
 
 @keyframes floating {
@@ -145,52 +141,68 @@ body {
     transform: translateY(0px);
   }
 }
-
+/* skill section */
 .my-skills {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  padding: 5rem 5%;
+  background: var(--darker-bg);
+}
+.three-type{
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+
+}
+
+.my-skills h1{
+  color: var(--accent);
+  font-weight: lighter;
 }
 .skill {
   width: 28vw;
   height: 28vh;
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Ithu thaan glass effect tharum */
+  backdrop-filter: blur(5px); /* Ithu thaan glass effect tharum */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-  transition: transform 0.3s ease; /* Animation kaaga */
+  padding: 2rem;
+  
+  transition: all 0.3s ease; /* Animation kaaga */
   color: #fff;
 
   margin: 20px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  border-radius: 20px;
-  padding: 5px;
-
-  justify-content: space-between;
+  border-radius: 15px;
 }
 .skill:hover {
   transform: translateY(-10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 10px white;
+  border: 1px solid var(--accent);
+  box-shadow: 0 10px 30px var(--accent-glow);
 }
-.skill h4 {
-  color: #af5fff;
-  font-size: larger;
+.skill i {
+  color: var(--accent);
+  font-size: large;
 
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .skill a {
   text-decoration: none;
   color: inherit;
-  background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+  background: var(--accent);
   border-radius: 20px;
   padding: 5px;
+}
+
+.skill-heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 1px solid white;
+  justify-content: flex-start;
+  
 }
